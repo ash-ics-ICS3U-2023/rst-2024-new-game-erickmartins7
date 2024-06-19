@@ -1,0 +1,178 @@
+body {
+    background-image: url(https://st.depositphotos.com/1017573/4802/i/450/depositphotos_48029605-stock-photo-poker-table-felt-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #752d2d;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px #222020;
+    text-align: center;
+  animation-name: spinTitle, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+@keyframes spinTitle { /* This keyframe holds what the styles of the element will be at certain times. Using the rotateY() method.*/
+    0% {
+        transform: rotateY(0deg); /* Start rotation at 0 degrees */
+    }
+    100% {
+        transform: rotateY(360deg); /* End rotation at 360 degrees */
+    }
+}
+@keyframes depth {  /* This keyframe creates a shaddow for the text at certain times to give the text a 3D effect.*/
+    0% { text-shadow: 0 0 black; }
+    25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+    50% { text-shadow: 0 0 black; }
+    75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+    100% { text-shadow: 0 0 black; }
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #e21d1d;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.table {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.player, .dealer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card {
+    width: 60px;
+    height: 90px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #000;
+    position: relative;
+}
+
+.card.face-down {
+    background-color: #006400;
+    border: 2px solid #003200;
+}
+
+.card::before, .card::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+    top: 5px;
+    left: 5px;
+}
+
+.card::after {
+    bottom: 5px;
+    right: 5px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for individual score displays */
+.scores div {
+    margin: 0 20px; /* Space between scores */
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+button:disabled {
+    background-color: #b3b3b3;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ffcc00;
+}

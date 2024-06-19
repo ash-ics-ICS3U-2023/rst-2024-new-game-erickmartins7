@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <style>
+        .card-container {
+            display: flex;
+        }
+        .card-container img {
+            margin: 5px;
+            width: 100px;  /* Adjust the width of the card images as needed */
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <div>
+        <h1>Blackjack</h1>
+        <div>
+            <button id="btn_deal">Deal</button>
+            <button id="btn_hit" disabled>Hit</button>
+            <button id="btn_stand" disabled>Stand</button>
+        </div>
+            <div class="scores">
+                <div>Player Score: <span id="playerScore">0</span></div>
+                <div>Dealer Score: <span id="dealerScore">0</span></div>
+        </div>
+        <div>
+            <h2>Player's Hand</h2>
+            <div id="playerCards" class="card-container"></div>
+        </div>
+        <div>
+            <h2>Dealer's Hand</h2>
+            <div id="dealerCards" class="card-container"></div>
+        </div>
+        <div>
+            <h2><p id="gameMessages"></p></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
