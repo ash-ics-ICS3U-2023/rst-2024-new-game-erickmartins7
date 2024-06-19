@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateScores(true); // Hide dealer score initially
 
         document.getElementById("gameMessages").textContent = ''; // Clears the previous game's messages.
+        document.getElementById("gameMessages2").textContent = '';
         document.getElementById("playerCards").innerHTML = ''; // Clears the card container for the player.
         document.getElementById("dealerCards").innerHTML = ''; // Clears the card container for the dealer.
 
@@ -125,12 +126,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (dealerScore > 21) {
             document.getElementById("gameMessages").textContent = "Dealer busts! You win!";
+            document.getElementById("gameMessages2").textContent = "Click the Deal button to play again";
         } else if (dealerScore > playerScore) {
             document.getElementById("gameMessages").textContent = "Dealer wins!";
+            document.getElementById("gameMessages2").textContent = "Click the Deal button to play again";
         } else if (dealerScore < playerScore) {
             document.getElementById("gameMessages").textContent = "You win!";
+            document.getElementById("gameMessages2").textContent = "Click the Deal button to play again";
         } else {
             document.getElementById("gameMessages").textContent = "It's a tie!";
+            document.getElementById("gameMessages2").textContent = "Click the Deal button to play again";
         }
         updateScores(false);  // Show dealer score after stand
         endGame();
